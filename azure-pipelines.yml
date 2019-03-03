@@ -1,0 +1,74 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- task: DeleteFiles@1
+  displayName: 'Delete JUnit files'
+  inputs:
+    SourceFolder: junit
+    Contents: 'TESTS*.xml'
+
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'Install dependencies and build'
+
+- task: Npm@1
+  displayName: 'Lint'
+  inputs:
+    command: custom
+    customCommand: ng lint --format=stylish
+
+- task: Npm@1
+  displayName: 'Run unit/integration tests'
+  inputs:
+    command: custom
+    customCommand: ng test --watch=false --code-coverage
+
+- task: PublishTestResults@2
+  displayName: 'Publish unit/integration test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/junit
+    testRunTitle: Angular
+    testResultsFormat: JUnit
+    testResultsFiles: "**/TESTS*.xml"
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage results'
+  condition: succeededOrFailed()
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: 'coverage/cobertura-coverage.xml'
+    reportDirectory: coverage
+    failIfCoverageEmpty: true
+
+- task: Npm@1
+  displayName: 'Run end-to-end tests'
+  inputs:
+    command: custom
+    customCommand: ng e2e
+
+- task: PublishTestResults@2
+  displayName: 'Publish end-to-end test results'
+  condition: succeededOrFailed()
+  inputs:
+    searchFolder: $(System.DefaultWorkingDirectory)/junit
+    testRunTitle: Angular_E2E
+    testResultsFormat: JUnit
+    testResultsFiles: "**/junit*.xml"
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'website'
+    targetPath: 'dist'
