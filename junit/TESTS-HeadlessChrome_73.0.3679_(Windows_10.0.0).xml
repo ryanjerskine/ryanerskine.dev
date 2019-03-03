@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 73.0.3679 (Windows 10.0.0)" package="" timestamp="2019-03-03T08:56:21" id="0" hostname="DESKTOP-8PP3ALM" tests="4" errors="0" failures="0" time="0.131">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/73.0.3679.0 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="0.079" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).AppComponent"/>
+  <testcase name="ErrorComponent should create" time="0.016" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).ErrorComponent"/>
+  <testcase name="LandingComponent should create" time="0.024" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).LandingComponent"/>
+  <testcase name="NotFoundComponent should create" time="0.012" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).NotFoundComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
