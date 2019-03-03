@@ -74,11 +74,7 @@ steps:
     testResultsFormat: JUnit
     testResultsFiles: "**/junit*.xml"
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
+- task: PublishPipelineArtifact@0
   inputs:
-    rootFolderOrFile: 'dist'
-    includeRootFolder: false
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts: dist'
+    artifactName: 'deploy'
+    targetPath: 'dist'
