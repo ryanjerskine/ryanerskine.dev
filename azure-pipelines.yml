@@ -27,13 +27,13 @@ steps:
   displayName: 'Lint'
   inputs:
     command: custom
-    customCommand: ng lint --format=stylish
+    customCommand: run lint --format=stylish
 
 - task: Npm@1
   displayName: 'Run unit/integration tests'
   inputs:
     command: custom
-    customCommand: ng test --watch=false --code-coverage
+    customCommand: run test --watch=false --code-coverage
 
 - task: PublishTestResults@2
   displayName: 'Publish unit/integration test results'
@@ -57,7 +57,7 @@ steps:
   displayName: 'Run end-to-end tests'
   inputs:
     command: custom
-    customCommand: ng e2e
+    customCommand: run e2e
 
 - task: PublishTestResults@2
   displayName: 'Publish end-to-end test results'
