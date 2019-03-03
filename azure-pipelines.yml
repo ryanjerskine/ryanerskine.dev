@@ -3,6 +3,7 @@ trigger:
 
 pool:
   vmImage: 'Ubuntu-16.04'
+  demands: npm
 
 steps:
 
@@ -73,7 +74,11 @@ steps:
     testResultsFormat: JUnit
     testResultsFiles: "**/junit*.xml"
 
-- task: PublishPipelineArtifact@0
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
   inputs:
-    artifactName: 'website'
-    targetPath: 'dist'
+    rootFolderOrFile: 'dist'
+    includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts: dist'
