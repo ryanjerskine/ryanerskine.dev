@@ -20,7 +20,7 @@ steps:
 - task: Npm@1
   displayName: 'Installing Angular CLI'
   inputs:
-    command: install -g @angular/cli
+    command: install @angular/cli -- -g
 
 - task: Npm@1
   displayName: 'Installing dependencies'
