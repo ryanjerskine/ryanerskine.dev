@@ -18,11 +18,6 @@ steps:
     Contents: 'TESTS*.xml'
 
 - task: Npm@1
-  displayName: 'Installing Angular CLI'
-  inputs:
-    command: install @angular/cli -- -g
-
-- task: Npm@1
   displayName: 'Installing dependencies'
   inputs:
     command: install
