@@ -78,4 +78,4 @@ steps:
   displayName: 'Publish app'
   inputs:
     artifactName: 'app'
-    targetPath: $(System.DefaultWorkingDirectory)dist
+    targetPath: $(System.DefaultWorkingDirectory)/dist
