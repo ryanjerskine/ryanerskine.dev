@@ -77,5 +77,5 @@ steps:
 - task: PublishPipelineArtifact@0
   displayName: 'Publish app'
   inputs:
-    artifactName: 'deploy'
-    targetPath: 'dist'
+    artifactName: 'app'
+    targetPath: $(System.DefaultWorkingDirectory)dist
