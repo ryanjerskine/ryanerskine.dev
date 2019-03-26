@@ -1,3 +1,89 @@
-<h1>
-  Welcome to ryanerskine.dev!
-</h1>
+<mat-toolbar class="bg-transparent">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon color="primary">menu</mat-icon>
+    </button>
+    <a href="/">ryanerskine.dev</a>
+    <div class="spacer"></div>
+    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.signup()">Create Account</button>
+    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Sign In</button>
+    <button mat-icon-button [matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()">
+      <mat-icon color="primary">person</mat-icon>
+    </button>
+    <mat-menu #accountMenu="matMenu">
+      <button mat-menu-item class="text-center">Settings</button>
+      <button mat-menu-item (click)="auth.logout()" class="text-center">Sign Out</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="text-center">
+  <h1 class="mat-display-3 fw-bold mb-0 mt-3">Full-stack c# and Angular developer</h1>
+  <h2 class="mat-display-1 mb-5">I code things. Sometimes they work.</h2>
+  <img src="/assets/img/avatar.svg">
+</div>
+<br><br><br><br><br><br><br>
+<div class="intro text-center">
+  <h4 class="mat-display-1 fw-bold mt-3">Hi, I'm Ryan. Nice to meet you.</h4>
+  <p class="mat-title">
+    I began my development journey in high school nearly 10 years ago with simple PHP and JavaScript development.
+    Since that time, I have shifted my focus to c# and Angular. Since graduating in 2016, I have worked on various
+    projects ranging from simple REST APIs to complex distributed systems. More recently, I have found myself
+    interested in Event Sourcing and Domain Driven Design. I am a naturally curious problem solver and I continually
+    work to expand my development knowledge.
+  </p>
+</div>
+<mat-card class="about">
+  <div>
+    <div class="text-center">
+      <mat-icon color="primary">device_hub</mat-icon>
+      <h4 class="mt-0">Back-End Development</h4>
+    </div>
+    
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+  </div>
+  <div>
+    <div class="text-center">
+      <mat-icon color="primary">laptop_mac</mat-icon>
+      <h4 class="mt-0">Front-End Development</h4>
+    </div>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+  </div>
+  <div>
+    <div class="text-center">
+      <mat-icon color="primary">developer_mode</mat-icon>
+      <h4 class="mt-0">More Interests</h4>
+    </div>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+    Simple <br>
+  </div>
+</mat-card>
+
+<footer class="bg-primary">
+  <div class="copyright">&copy; 2019 Copyright</div>
+</footer>

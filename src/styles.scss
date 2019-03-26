@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'normalize.css/normalize.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Utils */
+.text-center { text-align: center!important; }
+.m-0 { margin: 0!important; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-3 { margin-top: 1rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mt-5 { margin-top: 3rem; }
+.mb-5 { margin-bottom: 3rem; }
+.fw-bold { font-weight: bold; }
+.bg-transparent { background-color: transparent!important; }
+.bg-primary { background-color: #3f51b4!important; }

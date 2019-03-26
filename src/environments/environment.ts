@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth0ClientId: '90FZ6t2nfNgzVPgRI2VfUSQwYTKE2Rm7',
+  auth0Domain: 'accounts.ryanerskine.dev',
+  auth0RedirectUri: 'http://localhost:4200/auth-callback',
+  logoutUri: 'https://accounts.ryanerskine.dev/v2/logout',
+  defaultLogoutRedirectUri: 'http://localhost:4200'
 };
 
 /*
