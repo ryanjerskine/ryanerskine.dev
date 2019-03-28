@@ -3,10 +3,16 @@
     <button mat-icon-button>
       <mat-icon color="primary">menu</mat-icon>
     </button>
-    <a href="/">ryanerskine.dev</a>
-    <div class="spacer"></div>
-    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.signup()">Create Account</button>
-    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Sign In</button>
+    <div class="spacer">
+      <a href="/">ryanerskine.dev</a>
+    </div>
+    <!-- Login/Sign Up Buttons -->
+    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.signup()" class="btn-account">Create Account</button>
+    <button mat-raised-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="auth.login()" class="btn-login">Sign In</button>
+    <button mat-icon-button (click)="auth.login()" class="btn-login-mobile">
+      <mat-icon color="primary">exit_to_app</mat-icon>
+    </button>
+    <!-- Logged In Menu -->
     <button mat-icon-button [matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()">
       <mat-icon color="primary">person</mat-icon>
     </button>
@@ -17,19 +23,23 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <div class="text-center">
-  <h1 class="mat-display-3 fw-bold mb-0 mt-3">Full-stack c# and Angular developer</h1>
+  <h1 class="mat-display-3 fw-bold m-0 pt-5">Full-stack C# and Angular developer</h1>
   <h2 class="mat-display-1 mb-5">I code things. Sometimes they work.</h2>
-  <img src="/assets/img/avatar.svg">
+  <img class="avatar" src="/assets/img/avatar.svg">
 </div>
-<br><br><br><br><br><br><br>
+<img class="technology" src="/assets/img/technology.svg">
 <div class="intro text-center">
-  <h4 class="mat-display-1 fw-bold mt-3">Hi, I'm Ryan. Nice to meet you.</h4>
+  <h4 class="mat-display-1 fw-bold mt-3">
+    Hi, I'm Ryan.
+    <br class="mobile-break">
+    Nice to meet you.
+  </h4>
   <p class="mat-title">
     I began my development journey in high school nearly 10 years ago with simple PHP and JavaScript development.
     Since that time, I have shifted my focus to c# and Angular. Since graduating in 2016, I have worked on various
     projects ranging from simple REST APIs to complex distributed systems. More recently, I have found myself
-    interested in Event Sourcing and Domain Driven Design. I am a naturally curious problem solver and I continually
-    work to expand my development knowledge.
+    interested in Event Sourcing and Domain Driven Design. I am a naturally curious problem solver continually
+    working to expand my development knowledge.
   </p>
 </div>
 <mat-card class="about">
