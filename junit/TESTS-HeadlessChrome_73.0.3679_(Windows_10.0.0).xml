@@ -1,12 +1,238 @@
 <?xml version="1.0"?>
-<testsuite name="HeadlessChrome 73.0.3679 (Windows 10.0.0)" package="" timestamp="2019-03-03T08:56:21" id="0" hostname="DESKTOP-8PP3ALM" tests="4" errors="0" failures="0" time="0.131">
+<testsuite name="HeadlessChrome 73.0.3679 (Windows 10.0.0)" package="" timestamp="2019-03-29T06:08:22" id="0" hostname="DESKTOP-8PP3ALM" tests="6" errors="0" failures="2" time="0.288">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/73.0.3679.0 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent should create the app" time="0.079" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).AppComponent"/>
-  <testcase name="ErrorComponent should create" time="0.016" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).ErrorComponent"/>
-  <testcase name="LandingComponent should create" time="0.024" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).LandingComponent"/>
-  <testcase name="NotFoundComponent should create" time="0.012" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).NotFoundComponent"/>
+  <testcase name="AppComponent should create the app" time="0.084" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).AppComponent"/>
+  <testcase name="AuthCallbackComponent should create" time="0.015" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).AuthCallbackComponent"/>
+  <testcase name="ErrorComponent should create" time="0.018" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).ErrorComponent"/>
+  <testcase name="LandingComponent should create" time="0.141" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).LandingComponent">
+    <failure type="">'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;menu&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;div class="spacer"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@3:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("Sign In&lt;/button&gt;
+    &lt;button mat-icon-button (click)="auth.login()" class="btn-login-mobile"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;exit_to_app&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;!-- Logged In Menu --&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@12:6
+Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("
+    &lt;/button&gt;
+    &lt;!-- Logged In Menu --&gt;
+    &lt;button mat-icon-button [ERROR -&gt;][matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()"&gt;
+      &lt;mat-icon color="primary"&gt;per"): ng:///DynamicTestModule/LandingComponent.html@15:28
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("    &lt;button mat-icon-button [matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-menu #accountMenu="matMenu"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@16:6
+There is no directive with "exportAs" set to "matMenu" ("
+      &lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-menu [ERROR -&gt;]#accountMenu="matMenu"&gt;
+      &lt;button mat-menu-item class="text-center"&gt;Settings&lt;/button&gt;
+      &lt;butt"): ng:///DynamicTestModule/LandingComponent.html@18:14
+'mat-menu' is not a known element:
+1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+      &lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    [ERROR -&gt;]&lt;mat-menu #accountMenu="matMenu"&gt;
+      &lt;button mat-menu-item class="text-center"&gt;Settings&lt;/button&gt;
+ "): ng:///DynamicTestModule/LandingComponent.html@18:4
+'mat-toolbar-row' is not a known element:
+1. If 'mat-toolbar-row' is an Angular component, then verify that it is part of this module.
+2. If 'mat-toolbar-row' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;mat-toolbar class="bg-transparent"&gt;
+  [ERROR -&gt;]&lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+      &lt;mat-icon color="primary"&gt;menu&lt;/mat-icon&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@1:2
+'mat-toolbar' is not a known element:
+1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR -&gt;]&lt;mat-toolbar class="bg-transparent"&gt;
+  &lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@0:0
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;device_hub&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;Back-End Development&lt;/h4&gt;
+    "): ng:///DynamicTestModule/LandingComponent.html@47:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;laptop_mac&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;Front-End Development&lt;/h4&gt;
+   "): ng:///DynamicTestModule/LandingComponent.html@72:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;developer_mode&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;More Interests&lt;/h4&gt;
+    &lt;/"): ng:///DynamicTestModule/LandingComponent.html@84:6
+'mat-card' is not a known element:
+1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/p&gt;
+&lt;/div&gt;
+[ERROR -&gt;]&lt;mat-card class="about"&gt;
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@44:0
+Error: Template parse errors:
+    at syntaxError (node_modules/@angular/compiler/fesm5/compiler.js:2430:1)
+    at TemplateParser.push../node_modules/@angular/compiler/fesm5/compiler.js.TemplateParser.parse (node_modules/@angular/compiler/fesm5/compiler.js:20604:1)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._parseTemplate (node_modules/@angular/compiler/fesm5/compiler.js:26167:1)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileTemplate (node_modules/@angular/compiler/fesm5/compiler.js:26154:1)
+    at node_modules/@angular/compiler/fesm5/compiler.js:26097:48
+    at Set.forEach (&lt;anonymous&gt;)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileComponents (node_modules/@angular/compiler/fesm5/compiler.js:26097:1)
+    at node_modules/@angular/compiler/fesm5/compiler.js:26015:1
+    at Object.then (node_modules/@angular/compiler/fesm5/compiler.js:2421:33)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileModuleAndAllComponents (node_modules/@angular/compiler/fesm5/compiler.js:26013:1)
+</failure>
+    <failure type="">Error: Template parse errors:
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;menu&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;div class="spacer"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@3:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("Sign In&lt;/button&gt;
+    &lt;button mat-icon-button (click)="auth.login()" class="btn-login-mobile"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;exit_to_app&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;!-- Logged In Menu --&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@12:6
+Can't bind to 'matMenuTriggerFor' since it isn't a known property of 'button'. ("
+    &lt;/button&gt;
+    &lt;!-- Logged In Menu --&gt;
+    &lt;button mat-icon-button [ERROR -&gt;][matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()"&gt;
+      &lt;mat-icon color="primary"&gt;per"): ng:///DynamicTestModule/LandingComponent.html@15:28
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("    &lt;button mat-icon-button [matMenuTriggerFor]="accountMenu" *ngIf="auth.isAuthenticated()"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-menu #accountMenu="matMenu"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@16:6
+There is no directive with "exportAs" set to "matMenu" ("
+      &lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-menu [ERROR -&gt;]#accountMenu="matMenu"&gt;
+      &lt;button mat-menu-item class="text-center"&gt;Settings&lt;/button&gt;
+      &lt;butt"): ng:///DynamicTestModule/LandingComponent.html@18:14
+'mat-menu' is not a known element:
+1. If 'mat-menu' is an Angular component, then verify that it is part of this module.
+2. If 'mat-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+      &lt;mat-icon color="primary"&gt;person&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    [ERROR -&gt;]&lt;mat-menu #accountMenu="matMenu"&gt;
+      &lt;button mat-menu-item class="text-center"&gt;Settings&lt;/button&gt;
+ "): ng:///DynamicTestModule/LandingComponent.html@18:4
+'mat-toolbar-row' is not a known element:
+1. If 'mat-toolbar-row' is an Angular component, then verify that it is part of this module.
+2. If 'mat-toolbar-row' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("&lt;mat-toolbar class="bg-transparent"&gt;
+  [ERROR -&gt;]&lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+      &lt;mat-icon color="primary"&gt;menu&lt;/mat-icon&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@1:2
+'mat-toolbar' is not a known element:
+1. If 'mat-toolbar' is an Angular component, then verify that it is part of this module.
+2. If 'mat-toolbar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("[ERROR -&gt;]&lt;mat-toolbar class="bg-transparent"&gt;
+  &lt;mat-toolbar-row&gt;
+    &lt;button mat-icon-button&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@0:0
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;device_hub&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;Back-End Development&lt;/h4&gt;
+    "): ng:///DynamicTestModule/LandingComponent.html@47:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;laptop_mac&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;Front-End Development&lt;/h4&gt;
+   "): ng:///DynamicTestModule/LandingComponent.html@72:6
+'mat-icon' is not a known element:
+1. If 'mat-icon' is an Angular component, then verify that it is part of this module.
+2. If 'mat-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+      [ERROR -&gt;]&lt;mat-icon color="primary"&gt;developer_mode&lt;/mat-icon&gt;
+      &lt;h4 class="mt-0"&gt;More Interests&lt;/h4&gt;
+    &lt;/"): ng:///DynamicTestModule/LandingComponent.html@84:6
+'mat-card' is not a known element:
+1. If 'mat-card' is an Angular component, then verify that it is part of this module.
+2. If 'mat-card' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message. ("
+  &lt;/p&gt;
+&lt;/div&gt;
+[ERROR -&gt;]&lt;mat-card class="about"&gt;
+  &lt;div&gt;
+    &lt;div class="text-center"&gt;
+"): ng:///DynamicTestModule/LandingComponent.html@44:0
+    at syntaxError (node_modules/@angular/compiler/fesm5/compiler.js:2430:1)
+    at TemplateParser.push../node_modules/@angular/compiler/fesm5/compiler.js.TemplateParser.parse (node_modules/@angular/compiler/fesm5/compiler.js:20604:1)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._parseTemplate (node_modules/@angular/compiler/fesm5/compiler.js:26167:1)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileTemplate (node_modules/@angular/compiler/fesm5/compiler.js:26154:1)
+    at node_modules/@angular/compiler/fesm5/compiler.js:26097:48
+    at Set.forEach (&lt;anonymous&gt;)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileComponents (node_modules/@angular/compiler/fesm5/compiler.js:26097:1)
+    at node_modules/@angular/compiler/fesm5/compiler.js:26015:1
+    at Object.then (node_modules/@angular/compiler/fesm5/compiler.js:2421:33)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler._compileModuleAndAllComponents (node_modules/@angular/compiler/fesm5/compiler.js:26013:1)
+</failure>
+    <failure type="">Expected undefined to be truthy.
+    at UserContext.&lt;anonymous&gt; (src/app/core/landing/landing.component.spec.ts:23:23)
+    at ZoneDelegate../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke (node_modules/zone.js/dist/zone.js:391:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (node_modules/zone.js/dist/zone-testing.js:289:1)
+    at ZoneDelegate../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke (node_modules/zone.js/dist/zone.js:390:1)
+</failure>
+  </testcase>
+  <testcase name="NotFoundComponent should create" time="0.023" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).NotFoundComponent"/>
+  <testcase name="AuthService should be created" time="0.007" classname="HeadlessChrome_73_0_3679_(Windows_10_0_0).AuthService">
+    <failure type="">Error: StaticInjectorError(DynamicTestModule)[RouterModule -&gt; Router]: 
+  StaticInjectorError(Platform: core)[RouterModule -&gt; Router]: 
+    NullInjectorError: No provider for Router!
+    at NullInjector.push../node_modules/@angular/core/fesm5/core.js.NullInjector.get (node_modules/@angular/core/fesm5/core.js:8895:1)
+    at resolveToken (node_modules/@angular/core/fesm5/core.js:9140:1)
+    at tryResolveToken (node_modules/@angular/core/fesm5/core.js:9084:1)
+    at StaticInjector.push../node_modules/@angular/core/fesm5/core.js.StaticInjector.get (node_modules/@angular/core/fesm5/core.js:8981:1)
+    at resolveToken (node_modules/@angular/core/fesm5/core.js:9140:1)
+    at tryResolveToken (node_modules/@angular/core/fesm5/core.js:9084:1)
+    at StaticInjector.push../node_modules/@angular/core/fesm5/core.js.StaticInjector.get (node_modules/@angular/core/fesm5/core.js:8981:1)
+    at resolveNgModuleDep (node_modules/@angular/core/fesm5/core.js:21217:1)
+    at NgModuleRef_.push../node_modules/@angular/core/fesm5/core.js.NgModuleRef_.get (node_modules/@angular/core/fesm5/core.js:21906:1)
+    at injectInjectorOnly (node_modules/@angular/core/fesm5/core.js:1773:1)
+</failure>
+  </testcase>
   <system-out>
     <![CDATA[
 ]]>
