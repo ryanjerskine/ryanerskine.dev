@@ -63,8 +63,7 @@ export class AuthService {
         window.location.hash = '';
         this.localLogin(authResult);
         this.router.navigate(['/']);
-      }
-      else if (err) {
+      } else if (err) {
         console.error(err);
         this.router.navigate(['/error']);
       }
