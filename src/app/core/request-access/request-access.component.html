@@ -1,0 +1,13 @@
+<div *ngIf="alreadyRequested">
+  <h1>Processing Request</h1>
+  <div>
+    Your request for {{requested}} is being processed. If you have not been granted
+    access within 48hrs, please use the contact form to send me a message.
+  </div>
+</div>
+
+<div *ngIf="!alreadyRequested">
+  <h1>Permission is required for {{requested}} access.</h1>
+  <button type="button">Request Access</button>
+  <button type="button" mat-raised-button color="primary" (click)="requestAccess()">Request Access</button>
+</div>

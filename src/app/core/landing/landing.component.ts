@@ -11,4 +11,8 @@ export class LandingComponent implements OnInit {
   constructor(public auth: AuthService) { }
 
   ngOnInit(): void { }
+
+  contactMe(): void {
+    alert('Not yet implemented.');
+  }
 }
