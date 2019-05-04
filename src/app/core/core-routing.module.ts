@@ -1,6 +1,4 @@
 import { AccountRequiredComponent } from './account-required/account-required.component';
-import { KioskModule } from './../kiosk/kiosk.module';
-import { MediaModule } from './../media/media.module';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 import { LandingComponent } from './landing/landing.component';
 import { NgModule } from '@angular/core';
@@ -16,8 +14,8 @@ const routes: Routes = [
   { path: 'not-found', component: NotFoundComponent },
   { path: 'request-access', component: RequestAccessComponent },
   { path: 'account-required', component: AccountRequiredComponent },
-  { path: 'media', loadChildren: () => MediaModule },
-  { path: 'kiosk', loadChildren: () => KioskModule },
+  { path: 'media', loadChildren: '../media/media.module#MediaModule' },
+  { path: 'kiosk', loadChildren: '../kiosk/kiosk.module#KioskModule' },
   { path: '**', redirectTo: 'not-found' }
 ];
 
