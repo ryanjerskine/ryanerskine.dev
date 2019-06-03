@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'not-found', component: NotFoundComponent },
   { path: 'request-access', component: RequestAccessComponent },
   { path: 'account-required', component: AccountRequiredComponent },
-  { path: 'media', loadChildren: '../media/media.module#MediaModule' },
-  { path: 'kiosk', loadChildren: '../kiosk/kiosk.module#KioskModule' },
+  { path: 'media', loadChildren: () => import('../media/media.module').then(m => m.MediaModule) },
+  { path: 'kiosk', loadChildren: () => import('../kiosk/kiosk.module').then(m => m.KioskModule) },
   { path: '**', redirectTo: 'not-found' }
 ];
 
