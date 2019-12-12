@@ -1,3 +1,5 @@
+[![Build Status](https://ryanjerskine.visualstudio.com/ryanerskine.dev/_apis/build/status/ryanerskine.dev-CI?branchName=master)](https://ryanjerskine.visualstudio.com/ryanerskine.dev/_build/latest?definitionId=3&branchName=master)
+
 # ryanerskine.dev Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
