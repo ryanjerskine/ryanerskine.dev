@@ -1,6 +1,9 @@
 trigger:
 - master
 
+variables:
+- group: pipeline-variables
+
 pool:
   vmImage: 'Ubuntu-16.04'
   demands: npm
@@ -74,8 +77,15 @@ steps:
     testResultsFormat: JUnit
     testResultsFiles: "**/junit*.xml"
 
+-task: Npm@1
+  displayName: 'Deploy to Firebase'
+  inputs:
+    command: custom
+    customCommand: run firebase deploy --token $(FIREBASE_TOKEN)
+
 - task: PublishPipelineArtifact@0
   displayName: 'Publish app'
   inputs:
     artifactName: 'app'
     targetPath: $(System.DefaultWorkingDirectory)/dist
+  enabled: false
