@@ -81,7 +81,7 @@ steps:
   displayName: 'Deploy to Firebase'
   inputs:
     command: custom
-    customCommand: run firebase deploy --token $(FIREBASE_TOKEN)
+    customCommand: run deploy
 
 - task: PublishPipelineArtifact@0
   displayName: 'Publish app'
