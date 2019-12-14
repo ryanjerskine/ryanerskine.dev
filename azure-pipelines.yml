@@ -77,7 +77,7 @@ steps:
     testResultsFormat: JUnit
     testResultsFiles: "**/junit*.xml"
 
--task: Npm@1
+- task: Npm@1
   displayName: 'Deploy to Firebase'
   inputs:
     command: custom
