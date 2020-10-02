@@ -7,6 +7,8 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+  currentYear = new Date().getFullYear();
+  devStartYear = Math.abs(2008 - this.currentYear);
 
   constructor(public auth: AuthService) { }
 

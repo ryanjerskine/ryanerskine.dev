@@ -22,13 +22,18 @@
         <mat-icon matListIcon>assignment</mat-icon>
         <h3 mat-line>My Résumé</h3>
       </mat-list-item>
+      <h3 matSubheader>Media</h3>
+      <mat-list-item [routerLink]="['https://media.ryanerskine.dev/ombi/search']">
+        <mat-icon matListIcon>movie</mat-icon>
+        <h3 mat-line>Request Movie/Show</h3>
+      </mat-list-item>
       <h3 matSubheader>Products</h3>
       <mat-list-item [routerLink]="['/kiosk']">
         <mat-icon matListIcon>touch_app</mat-icon>
         <h3 mat-line>Kiosk Gallery</h3>
       </mat-list-item>
       <mat-list-item [routerLink]="['/media']">
-        <mat-icon matListIcon>movie</mat-icon>
+        <mat-icon matListIcon>play_circle_filled</mat-icon>
         <h3 mat-line>Omniflix</h3>
       </mat-list-item>
     </mat-nav-list>
@@ -72,10 +77,10 @@
       </h4>
       <p class="mat-title">
         I began my development journey in high school nearly 10 years ago with simple PHP and JavaScript development.
-        Since that time, I have shifted my focus to c# and Angular. Since graduating in 2016, I have worked on various
-        projects ranging from simple REST APIs to complex distributed systems. More recently, I have found myself
-        interested in Event Sourcing and Domain Driven Design. I am a naturally curious problem solver continually
-        working to expand my development knowledge.
+        Since that time, I have shifted my focus to c# and Angular. Since graduating from college in {{devStartYear}},
+        I have worked on various projects ranging from simple REST APIs to complex distributed systems. More recently,
+        I have found myself interested in Event Sourcing and Domain Driven Design. I am a naturally curious problem
+        solver constantly working to expand my development knowledge.
       </p>
     </div>
     <mat-card class="about">
@@ -84,7 +89,7 @@
           <mat-icon color="primary">device_hub</mat-icon>
           <h4 class="mt-0">Back-End Development</h4>
         </div>
-        
+
         Simple <br>
         Simple <br>
         Simple <br>
@@ -129,9 +134,9 @@
         Simple <br>
       </div>
     </mat-card>
-    
+
     <footer class="bg-primary">
-      <div class="copyright">&copy; 2019 Copyright</div>
+      <div class="copyright">&copy; {{currentYear}} Copyright</div>
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
