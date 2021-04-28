@@ -1,6 +1,5 @@
-import { AuthService } from './../services/auth.service';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { MockComponent, MockDirective } from 'ng-mocks';
+import { MockComponent } from 'ng-mocks';
 import { LandingComponent } from './landing.component';
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
