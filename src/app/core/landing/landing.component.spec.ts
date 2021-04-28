@@ -1,5 +1,5 @@
 import { AuthService } from './../services/auth.service';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MockComponent, MockDirective } from 'ng-mocks';
 import { LandingComponent } from './landing.component';
 import { MatButton } from '@angular/material/button';
@@ -16,7 +16,7 @@ describe('LandingComponent', () => {
   let component: LandingComponent;
   let fixture: ComponentFixture<LandingComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatMenuModule,
